@@ -14,9 +14,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-
-
+        Toast.makeText(this,"This is Toast", Toast.LENGTH_SHORT).show()
         MainModule.initSDK(
             applicationContext as Application,
            object : MainModule.ScanNotify{
