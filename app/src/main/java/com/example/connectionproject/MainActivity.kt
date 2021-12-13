@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        Toast.makeText(this,"This is Toast",Toast.LENGTH_SHORT).show()
+
 
         MainModule.initSDK(
             applicationContext as Application,
