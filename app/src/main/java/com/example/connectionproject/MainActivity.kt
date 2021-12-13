@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity() {
             applicationContext as Application,
            object : MainModule.ScanNotify{
                 override fun onDetected(response: Response) {
+                    Toast.makeText( applicationContext,"This is Toast", Toast.LENGTH_SHORT).show()
                     Log.i(TAG, "===========>>>> onDetected: code: ${response.code} --- isDetected: ${response.detected}")
                 }
             }
