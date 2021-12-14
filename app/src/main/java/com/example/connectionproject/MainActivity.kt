@@ -7,13 +7,16 @@ import android.util.Log
 import android.widget.Toast
 import com.example.checkconnectionmodule.MainModule
 import com.example.checkconnectionmodule.Response
+import com.example.connectionproject.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
     val TAG = "MainActivity"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        var binding: ActivityMainBinding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
         MainModule.initSDK(
             applicationContext as Application,
            object : MainModule.ScanNotify{
